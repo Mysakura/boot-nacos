@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+nacos:
+  config:
+    server-addr: localhost:8848
+    namespace: 0d5b0e7c-485c-469b-9b3c-eb20dc9d9bb1
+logging:
+  path: "./logs"

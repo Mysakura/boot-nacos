@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+
+<generatorConfiguration>
+	<context id="context1">
+
+		<!-- 这里引入扩展插件 -->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
+
+        <commentGenerator>
+            <!--  关闭自动生成的注释  -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+						connectionURL="jdbc:mysql://localhost:3306/mytest?useSSL=false"
+						userId="root"
+						password="1234"/>
+		<javaModelGenerator targetPackage="com.example.demo.model"
+			targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
+		<javaClientGenerator targetPackage="com.example.demo.dao"
+			targetProject="src/main/java" type="XMLMAPPER" />
+
+		<!--数据库的表名-->
+		<table tableName="user">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+
+       </context>
+   </generatorConfiguration>

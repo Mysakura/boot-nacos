@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+nacos:
+  config:
+    server-addr: localhost:8848
+    namespace: 5fb0883c-2db7-4344-9883-0394edb5c858
+logging:
+  path: /AppLogs/boot-nacos
